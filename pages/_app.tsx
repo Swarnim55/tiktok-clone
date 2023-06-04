@@ -21,7 +21,9 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-      <GoogleOAuthProvider clientId="1018479206991-q6vuhto5uf5bfirfdvgcv8vrf3r76nq2.apps.googleusercontent.com">
+      <GoogleOAuthProvider
+        clientId={`${process.env.NEXT_PUBLIC_GOOGLE_API_TOKEN}`}
+      >
         <Navbar />
         <div className="flex gap-6 md:gap-20">
           <div className="h-[92vh] overflow-hidden xl:hover:overflow-auto">
